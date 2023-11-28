@@ -1,0 +1,77 @@
+﻿@model CRUDCORE.Models.ViewModels.EmpleadoVM
+@{
+    ViewData["Title"] = "Empleado_Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.oEmpleado.IdEmpleado == 0)
+{
+
+    <h2>Crear Empleado</h2>
+}
+else
+{
+    <h2>Editar Empleado</h2>
+}
+<div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <form asp-action="Empleado_Detalle" asp-controller="Home" method="post" class="form-container" id="employeeForm">
+            <input type="hidden" asp-for="oEmpleado.IdEmpleado" />
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oEmpleado.NombreCompleto">Nombre Completo</label>
+                <input class="form-control form-control-sm" asp-for="oEmpleado.NombreCompleto" type="text" id="nombreCompleto" />
+                <div id="nombreCompletoError" class="text-danger"></div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oEmpleado.Correo">Correo</label>
+                <input class="form-control form-control-sm" asp-for="oEmpleado.Correo" type="text" id="correo" />
+                <div id="correoError" class="text-danger"></div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oEmpleado.Telefono">Telefono</label>
+                <input class="form-control form-control-sm" asp-for="oEmpleado.Telefono" type="text" id="telefono" />
+                <div id="telefonoError" class="text-danger"></div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oEmpleado.Cedula">Cedula</label>
+                <input class="form-control form-control-sm" asp-for="oEmpleado.Cedula" type="text" id="cedula" />
+                <div id="cedulaError" class="text-danger"></div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oEmpleado.Direccion">Direccion</label>
+                <input class="form-control form-control-sm" asp-for="oEmpleado.Direccion" type="text" id="direccion" />
+                <div id="direccionError" class="text-danger"></div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" asp-for="oEmpleado.IdCargo">Cargo</label>
+                <select class="form-select form-select-sm" asp-for="oEmpleado.IdCargo" asp-items="@Model.oListaCargo">
+                    <option selected disabled>-- Seleccionar --</option>
+                </select>
+            </div>
+
+            <div class="mb-2 text-center">
+
+                @if (Model.oEmpleado.IdEmpleado == 0)
+                {
+                    <button id="submitButton" class="btn btn-primary btn-md w-100" type="submit" disabled>Crear</button>
+                }
+                else
+                {
+                    <button id="submitButton" class="btn btn-primary btn-md w-100" type="submit" disabled>Actualizar</button>
+                }
+                <a class="btn btn-dark btn-md mt-2" asp-action="Index" asp-controller="Home">Volver</a>
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+

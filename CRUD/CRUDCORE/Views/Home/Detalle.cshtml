@@ -1,0 +1,43 @@
+﻿@model CRUDCORE.Models.Empleado
+@{
+    ViewData["Title"] = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Nombre completo</th>
+                <td>@Model.NombreCompleto</td>
+            </tr>
+            <tr>
+                <th>Correo</th>
+                <td>@Model.Correo</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>@Model.Telefono</td>
+            </tr>
+            <tr>
+                <th>Cedula</th>
+                <td>@Model.Cedula</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>@Model.Direccion</td>
+            </tr>
+            <tr>
+                <th>Cargo</th>
+                <td>@Model.oCargo.Descripcion</td>
+            </tr>
+        </table>
+
+        <div class="text-center">
+            <a class="btn btn-dark btn-md" asp-action="Index" asp-controller="Home">Volver</a>
+        </div>
+    </div>
+</div>
+
+
