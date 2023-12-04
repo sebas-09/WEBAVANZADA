@@ -7998,11 +7998,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebastian\\source\\repos\\CRUDCORE\\CRUDCORE\\CRUDCORE.csproj",
+      "projectUniqueName": "C:\\Users\\Sebastian\\source\\repos\\CRUDCORE\\CRUD\\CRUDCORE\\CRUDCORE.csproj",
       "projectName": "CRUDCORE",
-      "projectPath": "C:\\Users\\Sebastian\\source\\repos\\CRUDCORE\\CRUDCORE\\CRUDCORE.csproj",
+      "projectPath": "C:\\Users\\Sebastian\\source\\repos\\CRUDCORE\\CRUD\\CRUDCORE\\CRUDCORE.csproj",
       "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebastian\\source\\repos\\CRUDCORE\\CRUDCORE\\obj\\",
+      "outputPath": "C:\\Users\\Sebastian\\source\\repos\\CRUDCORE\\CRUD\\CRUDCORE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sebastian\\AppData\\Roaming\\NuGet\\NuGet.Config",
